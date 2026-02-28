@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
     :root {
         --background: theme('colors.slate.50');
         --foreground: theme('colors.gray.900');
     }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --background: #030712;
-            --foreground: theme('colors.gray.100');
-        }
+    :root.dark {
+        --background: #030712;
+        --foreground: theme('colors.gray.100');
     }
 
     body {

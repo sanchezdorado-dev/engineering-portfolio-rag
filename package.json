@@ -16,6 +16,7 @@
     "preact": "^10.28.4"
   },
   "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.71",
     "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^22.13.5",
     "tailwindcss": "^4.2.1"

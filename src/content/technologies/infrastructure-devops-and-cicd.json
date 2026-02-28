@@ -1,6 +1,6 @@
 {
     "order": 5,
-    "name": "Infrastructure, DevOps & CI/CD",
+    "name": "Infraestructura, DevOps & CI/CD",
     "technologies": [
         { "name": "Docker", "icon": "docker", "color": "#2496ED" },
         { "name": "Git", "icon": "git", "color": "#F05032" },

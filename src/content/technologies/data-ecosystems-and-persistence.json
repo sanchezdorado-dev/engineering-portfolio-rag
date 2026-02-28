@@ -1,6 +1,6 @@
 {
     "order": 4,
-    "name": "Data Ecosystems & Persistence",
+    "name": "Ecosistemas de Datos & Persistencia",
     "technologies": [
         { "name": "PostgreSQL", "icon": "postgresql", "color": "#4169E1" },
         { "name": "MongoDB", "icon": "mongodb", "color": "#47A248" },

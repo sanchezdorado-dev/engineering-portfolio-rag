@@ -1,9 +1,9 @@
 {
     "order": 6,
-    "name": "Validation, Testing & Documentation",
+    "name": "Validación, Testing & Documentación",
     "technologies": [
         { "name": "JUnit", "icon": "junit5", "color": "#25A162" },
-        { "name": "Mockito", "icon": "testinglibrary", "color": "#90A4AE" },
+        { "name": "Mockito", "icon": "homebrew", "color": "#FBB040" },
         { "name": "Pytest", "icon": "pytest", "color": "#0A9EDC" },
         { "name": "Swagger", "icon": "swagger", "color": "#85EA2D" }
     ]

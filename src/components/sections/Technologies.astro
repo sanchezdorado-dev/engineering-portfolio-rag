@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import TechnologyCard from './TechnologyCard.astro';
+
+const categories = (await getCollection('technologies')).sort(
+  (a, b) => (a.data.order ?? 999) - (b.data.order ?? 999),
+);
+---
+
+<section id="tecnologias" class="py-20 px-4 bg-slate-50 dark:bg-gray-900 scroll-mt-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center gap-2 mb-8">
+      <svg
+        class="w-5 h-5 text-blue-600 shrink-0"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+        ></path>
+      </svg>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+        Tecnologías
+      </h2>
+    </div>
+
+    <p class="text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mb-8">
+      <strong class="text-gray-900 dark:text-white">
+        Ecosistema tecnológico orientado a la construcción de software robusto y mantenible.
+      </strong>
+      Especialización en el desarrollo de servicios desacoplados, la gestión eficiente de datos y la
+      automatización del ciclo de vida
+      <strong class="text-gray-900 dark:text-white">(SDLC)</strong>, asegurando entregas fiables
+      bajo
+      <strong class="text-gray-900 dark:text-white">estrictos estándares de seguridad</strong>
+      y calidad en producción.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {
+        categories.map((category) => (
+          <div class="bg-slate-50 dark:bg-gray-900 rounded-2xl p-6 border border-slate-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
+            <h3 class="text-[13px] font-bold text-gray-900 dark:text-white mb-4 border-l-4 border-blue-600 pl-4 uppercase tracking-wider">
+              {category.data.name}
+            </h3>
+
+            {category.data.technologies.length > 0 ? (
+              <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                {category.data.technologies.map((tech) => (
+                  <TechnologyCard
+                    name={tech.name}
+                    icon={tech.icon}
+                    color={tech.color ?? '#60a5fa'}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p class="text-[13px] text-gray-500 dark:text-gray-400 italic pl-4">
+                No hay tecnologías agregadas en esta categoría.
+              </p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

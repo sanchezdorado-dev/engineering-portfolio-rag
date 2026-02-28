@@ -1,0 +1,65 @@
+---
+interface Props {
+  href: string;
+  ariaLabel: string;
+  external?: boolean;
+  colSpan?: 'full' | 'half';
+  variant: 'default' | 'blue' | 'dark-blue';
+  title: string;
+  description: string;
+  cta?: string;
+}
+
+const {
+  href,
+  ariaLabel,
+  external = false,
+  colSpan = 'half',
+  variant,
+  title,
+  description,
+  cta,
+} = Astro.props;
+
+const containerClass = {
+  default: 'bg-slate-200 dark:bg-[#030712] border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white',
+  blue: 'bg-gradient-to-r from-blue-500 to-blue-700 text-white',
+  'dark-blue': 'bg-gradient-to-r from-blue-800 to-blue-600 text-white',
+}[variant];
+
+const iconBgClass = variant === 'default'
+  ? 'bg-gray-900 dark:bg-white/10'
+  : 'bg-white/20';
+
+const descriptionClass = variant === 'default'
+  ? 'text-xs text-gray-500 dark:text-gray-400'
+  : 'text-blue-100 text-[13px]';
+
+const ctaClass = variant === 'default'
+  ? 'text-gray-900 dark:text-gray-100'
+  : '';
+
+const externalAttrs = external
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {};
+---
+
+<a
+  href={href}
+  aria-label={ariaLabel}
+  class={`${colSpan === 'full' ? 'col-span-2' : ''} ${containerClass} rounded-2xl p-5 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-2xl group`}
+  {...externalAttrs}
+>
+  <div class="flex flex-col h-full justify-between">
+    <div>
+      <div class={`w-10 h-10 ${iconBgClass} rounded-xl flex items-center justify-center mb-4`}>
+        <slot name="icon" />
+      </div>
+      <h3 class="text-base font-bold mb-2">{title}</h3>
+      <p class={`${descriptionClass} leading-relaxed mb-4`}>{description}</p>
+    </div>
+    {cta && (
+      <p class={`text-sm font-medium mt-4 ${ctaClass}`}>{cta} →</p>
+    )}
+  </div>
+</a>

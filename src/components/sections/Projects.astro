@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (a.data.priority ?? 100) - (b.data.priority ?? 100),
+);
+---
+
+<section id="proyectos" class="py-12 px-4 bg-slate-200 dark:bg-[#030712] scroll-mt-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center gap-2 mb-8">
+      <svg
+        class="w-5 h-5 text-blue-600 shrink-0"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+        ></path>
+      </svg>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+        Proyectos
+      </h2>
+    </div>
+
+    <p class="text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mb-8">
+      <strong class="text-gray-900 dark:text-white">
+        Arquitecturas de software robustas y microservicios escalables.
+      </strong>
+      Diseño e implementación de soluciones que integran sistemas de
+      <strong class="text-gray-900 dark:text-white">IA Generativa (RAG)</strong> para resolver
+      problemas de negocio reales. Mi enfoque garantiza la integridad técnica mediante la
+      aplicación estricta de
+      <strong class="text-gray-900 dark:text-white">Clean Architecture</strong>,
+      <strong class="text-gray-900 dark:text-white">altos estándares de seguridad</strong> y la
+      automatización del flujo de entrega
+      <strong class="text-gray-900 dark:text-white">(CI/CD)</strong>.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project) => (
+        <ProjectCard {...project.data} />
+      ))}
+    </div>
+  </div>
+</section>

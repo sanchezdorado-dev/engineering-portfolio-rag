@@ -17,7 +17,14 @@
         "React",
         "MongoDB",
         "Clean Architecture",
+        "Clean Code",
         "SOLID",
-        "PayPal API"
+        "Maven",
+        "JUnit",
+        "Mockito",
+        "Swagger",
+        "PayPal API",
+        "Docker",
+        "Git"
     ]
 }

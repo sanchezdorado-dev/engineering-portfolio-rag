@@ -1,6 +1,6 @@
 {
     "order": 3,
-    "name": "Frontend Development & Performance",
+    "name": "Frontend & Rendimiento",
     "technologies": [
         { "name": "TypeScript", "icon": "typescript", "color": "#3178C6" },
         { "name": "Angular", "icon": "angular", "color": "#DD0031" },

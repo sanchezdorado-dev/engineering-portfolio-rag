@@ -1,7 +1,7 @@
 {
     "order": 7,
-    "name": "Project Management & Methodologies",
+    "name": "Gestión de Proyectos & Metodologías",
     "technologies": [
-        { "name": "Agile Methodologies (Scrum)", "icon": "scrumalliance", "color": "#0091EA" }
+        { "name": "Agile Methodologies (Scrum)", "icon": "jira", "color": "#0052CC" }
     ]
 }

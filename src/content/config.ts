@@ -14,6 +14,7 @@ const projectsCollection = defineCollection({
             z.array(z.object({ label: z.string(), url: z.string().url("Must be a valid URL") })),
         ]).optional(),
         liveUrl: z.string().url("Must be a valid URL").optional(),
+        hasDemo: z.boolean().optional(),
         skills: z.array(z.string()).min(1, "At least one skill is required"),
         status: z.enum(["production", "development"]).optional(),
     }),

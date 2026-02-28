@@ -1,11 +1,11 @@
 {
     "order": 1,
-    "name": "Software Architecture",
+    "name": "Arquitectura de Software",
     "technologies": [
-        { "name": "Clean Architecture", "icon": "architecture", "color": "#0288D1" },
+        { "name": "Clean Architecture", "icon": "target", "color": "#E53935" },
         { "name": "SOLID Principles", "icon": "blueprint", "color": "#60A5FA" },
-        { "name": "Clean Code", "icon": "codeclimate", "color": "#00B4B0" },
-        { "name": "Design Patterns", "icon": "obsidian", "color": "#5C6BC0" },
-        { "name": "Hexagonal Architecture", "icon": "hexagon", "color": "#43A047" }
+        { "name": "Clean Code", "icon": "sonarlint", "color": "#CB2029" },
+        { "name": "Design Patterns", "icon": "webcomponentsdotorg", "color": "#009688" },
+        { "name": "Hexagonal Architecture", "icon": "crystal", "color": "#000100" }
     ]
 }

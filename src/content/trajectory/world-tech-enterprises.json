@@ -20,9 +20,15 @@
         "MongoDB",
         "RAG",
         "Clean Architecture",
-        "SOLID",
         "Clean Code",
+        "SOLID",
+        "Maven",
+        "JUnit",
+        "Mockito",
+        "Swagger",
+        "Pytest",
         "Docker",
+        "Git",
         "GitLab CI/CD"
     ]
 }

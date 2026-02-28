@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import TrajectoryCard from './TrajectoryCard.astro';
+
+const entries = await getCollection('trajectory');
+const sortedEntries = entries.sort(
+  (a, b) => (a.data.order ?? 999) - (b.data.order ?? 999)
+);
+---
+
+<section id="trayectoria" class="py-20 px-4 bg-slate-200 dark:bg-[#030712] scroll-mt-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center gap-2 mb-10">
+      <svg class="w-5 h-5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+      <h2 class="text-xl font-bold text-gray-900 dark:text-white leading-tight">
+        Trayectoria
+      </h2>
+    </div>
+
+    <p class="text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mb-10">
+      <strong class="text-gray-900 dark:text-white">
+        Evolución profesional orientada a la construcción de software de alto impacto.
+      </strong>
+      Mi trayectoria refleja un enfoque constante en la
+      <strong class="text-gray-900 dark:text-white">calidad técnica</strong>, aplicando
+      <strong class="text-gray-900 dark:text-white">patrones de diseño</strong> y
+      <strong class="text-gray-900 dark:text-white">arquitecturas escalables</strong> para
+      transformar requisitos complejos en sistemas robustos y mantenibles. Todo ello alineado con
+      <strong class="text-gray-900 dark:text-white">altos estándares de seguridad</strong> y las
+      mejores prácticas del desarrollo en producción.
+    </p>
+
+    <div class="max-w-3xl">
+      {sortedEntries.map((entry) => (
+        <TrajectoryCard {...entry.data} />
+      ))}
+    </div>
+  </div>
+</section>
