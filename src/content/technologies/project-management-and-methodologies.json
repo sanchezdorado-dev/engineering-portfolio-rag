@@ -1,0 +1,7 @@
+{
+    "order": 7,
+    "name": "Project Management & Methodologies",
+    "technologies": [
+        { "name": "Agile Methodologies (Scrum)", "icon": "scrumalliance", "color": "#0091EA" }
+    ]
+}

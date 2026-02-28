@@ -1,0 +1,30 @@
+{
+    "featured": true,
+    "priority": 2,
+    "title": "Reactive Social Architecture",
+    "description": "Red social escalable basada en Java 21 y Angular 21, diseñada bajo los estándares de Clean Architecture y principios SOLID. El backend implementa un sistema de seguridad proactiva con Spring Boot 3.4, integrando JWT (OAuth2), protección contra ataques de fuerza bruta (Rate Limiting) y auditoría inmutable de acciones. El frontend utiliza Signals y Lazy Loading para una reactividad optimizada, apoyado en un sistema de diseño modular (Design Tokens) en Sass. Gestión de persistencia robusta con PostgreSQL y migraciones atómicas mediante Flyway.",
+    "thumbnail": "/assets/projects/social-network.webp",
+    "repository": [
+        {
+            "label": "Client (Angular 21)",
+            "url": "https://github.com/tu-usuario/social-platform-client"
+        },
+        {
+            "label": "Core (Spring Boot 3.4)",
+            "url": "https://github.com/tu-usuario/social-platform-core"
+        }
+    ],
+    "status": "production",
+    "skills": [
+        "Java 21",
+        "Spring Boot 3.4",
+        "Angular 21",
+        "PostgreSQL",
+        "Flyway",
+        "JWT/OAuth2",
+        "Signals",
+        "Clean Architecture",
+        "SOLID",
+        "Sass"
+    ]
+}

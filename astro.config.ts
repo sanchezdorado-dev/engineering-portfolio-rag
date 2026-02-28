@@ -1,20 +1,16 @@
-// @ts-check
 import { defineConfig, envField } from 'astro/config';
-
 import preact from '@astrojs/preact';
-
 import tailwindcss from '@tailwindcss/vite';
-
 import vercel from '@astrojs/vercel';
-
 import icon from 'astro-icon';
 
-// https://astro.build/config
 export default defineConfig({
+  ...(process.env.SITE_URL !== undefined ? { site: process.env.SITE_URL } : {}),
+
   integrations: [preact(), icon()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
   output: 'server',

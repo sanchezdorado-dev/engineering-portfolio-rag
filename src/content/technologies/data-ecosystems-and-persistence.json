@@ -1,0 +1,9 @@
+{
+    "order": 4,
+    "name": "Data Ecosystems & Persistence",
+    "technologies": [
+        { "name": "PostgreSQL", "icon": "postgresql", "color": "#4169E1" },
+        { "name": "MongoDB", "icon": "mongodb", "color": "#47A248" },
+        { "name": "Milvus", "icon": "milvus", "color": "#00A1EA" }
+    ]
+}

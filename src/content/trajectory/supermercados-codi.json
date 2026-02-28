@@ -1,0 +1,22 @@
+{
+    "order": 3,
+    "type": "experience",
+    "period": "Febrero 2021 – Mayo 2025",
+    "institution": "Supermercados CODI",
+    "role": "Assistant Manager | Team Lead",
+    "description": [
+        "Liderazgo de Equipos y Optimización de Workflows: Dirección y coordinación de equipos multidisciplinares en entornos de alto rendimiento. Enfoque en la optimización de procesos operativos y el cumplimiento de estándares de calidad, asegurando la eficiencia en flujos de trabajo críticos.",
+        "Gestión de Incidencias y Mitigación de Riesgos: Toma de decisiones estratégicas bajo alta presión para la resolución de bloqueos operativos. Aplicación de un enfoque analítico y metodologías de resolución de problemas para minimizar el impacto en la continuidad del servicio (SLA internos).",
+        "Análisis de Datos y Gestión de Recursos: Supervisión analítica mediante herramientas de gestión interna (ERP/Software de gestión), aplicando modelos lógicos y estructurados para la optimización de costes, control de stock y eficiencia económica del centro.",
+        "Compromiso con la Excelencia Técnica y el Alto Rendimiento: Capacidad demostrada de autogestión y disciplina al compaginar una posición de alta responsabilidad con la formación técnica superior en desarrollo de software, aplicando principios de mejora continua y rigor profesional en ambas áreas."
+    ],
+    "skills": [
+        "Team Leadership",
+        "Incident Management",
+        "SLA Monitoring",
+        "Workflow Optimization",
+        "ERP Systems",
+        "Data Analysis",
+        "Agile Methodologies"
+    ]
+}

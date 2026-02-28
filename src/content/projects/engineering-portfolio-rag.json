@@ -1,0 +1,19 @@
+{
+    "featured": true,
+    "priority": 1,
+    "title": "Engineering Portfolio & RAG",
+    "description": "Portfolio de alto rendimiento diseñada con Astro 5.0 e Island Architecture para optimizar la hidratación parcial y el rendimiento. Integra un sistema RAG orquestado mediante Milvus, HuggingFace y Groq, garantizando una inferencia semántica avanzada. La arquitectura implementa Clean Architecture, principios SOLID y validación de esquemas con Zod, asegurando escalabilidad, seguridad y el cumplimiento de estándares industriales de desarrollo.",
+    "thumbnail": "/assets/projects/portfolio-v5.webp",
+    "status": "production",
+    "skills": [
+        "Astro 5.0",
+        "RAG",
+        "Milvus",
+        "HuggingFace",
+        "Groq",
+        "Zod",
+        "Clean Architecture",
+        "SOLID",
+        "Island Architecture"
+    ]
+}

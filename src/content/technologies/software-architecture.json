@@ -1,0 +1,11 @@
+{
+    "order": 1,
+    "name": "Software Architecture",
+    "technologies": [
+        { "name": "Clean Architecture", "icon": "architecture", "color": "#0288D1" },
+        { "name": "SOLID Principles", "icon": "blueprint", "color": "#60A5FA" },
+        { "name": "Clean Code", "icon": "codeclimate", "color": "#00B4B0" },
+        { "name": "Design Patterns", "icon": "obsidian", "color": "#5C6BC0" },
+        { "name": "Hexagonal Architecture", "icon": "hexagon", "color": "#43A047" }
+    ]
+}

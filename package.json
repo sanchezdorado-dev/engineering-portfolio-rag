@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "engineering-portfolio-rag",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,10 +11,13 @@
   "dependencies": {
     "@astrojs/preact": "^4.1.3",
     "@astrojs/vercel": "^9.0.4",
-    "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.17.1",
     "astro-icon": "^1.1.5",
-    "preact": "^10.28.4",
+    "preact": "^10.28.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/node": "^22.13.5",
     "tailwindcss": "^4.2.1"
   }
 }

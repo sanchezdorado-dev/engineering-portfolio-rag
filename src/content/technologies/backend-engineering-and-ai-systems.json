@@ -1,0 +1,14 @@
+{
+    "order": 2,
+    "name": "Backend Engineering & AI Systems",
+    "technologies": [
+        { "name": "Java", "icon": "openjdk", "color": "#437291" },
+        { "name": "Spring Boot", "icon": "springboot", "color": "#6DB33F" },
+        { "name": "Python", "icon": "python", "color": "#3776AB" },
+        { "name": "LangChain", "icon": "langchain", "color": "#1C3C3C" },
+        { "name": "RAG Architectures", "icon": "probot", "color": "#FF9800" },
+        { "name": "Generative AI", "icon": "openai", "color": "#412991" },
+        { "name": "Language Models (LLMs)", "icon": "google-gemini", "color": "#8E75C2" },
+        { "name": "Vector Embeddings", "icon": "pinecone", "color": "#2196F3" }
+    ]
+}

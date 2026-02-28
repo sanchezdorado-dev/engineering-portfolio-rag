@@ -1,0 +1,23 @@
+{
+    "order": 2,
+    "type": "experience",
+    "period": "Junio 2023 – Diciembre 2024",
+    "institution": "E-commerce de Pirograbados (Emprendimiento Propio)",
+    "role": "Software Engineer | Founder",
+    "description": [
+        "Full-stack Architecture & Lifecycle Management: Diseño y despliegue integral de una plataforma e-commerce bajo Clean Architecture, utilizando Spring Boot y React para digitalizar y escalar un modelo de negocio tradicional hacia un entorno de alta disponibilidad.",
+        "Data Modeling & Schema Design: Modelado de datos en MongoDB para la gestión de catálogos dinámicos y polimórficos, optimizando la estructura de documentos para manejar variantes técnicas complejas de materiales y personalizaciones con un enfoque desacoplado.",
+        "Payment Orchestration & Secure Integration: Implementación y orquestación de pasarelas de pago mediante la API oficial de PayPal, garantizando el cumplimiento de estándares de seguridad críticos y el manejo íntegro de transacciones financieras basado en documentación oficial.",
+        "Engineering for Business Impact: Aplicación de principios SOLID y metodologías de ingeniería de software para alinear la arquitectura técnica con los objetivos de conversión, asegurando un código mantenible y un flujo de usuario de baja fricción."
+    ],
+    "skills": [
+        "Java",
+        "TypeScript",
+        "Spring Boot",
+        "React",
+        "MongoDB",
+        "Clean Architecture",
+        "SOLID",
+        "PayPal API"
+    ]
+}

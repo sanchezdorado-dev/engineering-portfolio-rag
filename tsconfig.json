@@ -8,6 +8,13 @@
     "dist"
   ],
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   }

@@ -1,0 +1,28 @@
+{
+    "order": 1,
+    "type": "experience",
+    "period": "Mayo 2025 – Enero 2026",
+    "institution": "World Tech Enterprises",
+    "role": "AI & Software Engineer (Intern) | AI Dept. & Internal Software Development",
+    "description": [
+        "Orquestación de Arquitecturas RAG: Diseño y despliegue de microservicios asíncronos en Python utilizando Milvus para la gestión de embeddings vectoriales, optimizando la recuperación semántica de información técnica y la latencia en la respuesta de agentes inteligentes.",
+        "Gobernanza y Arquitectura Full Stack: Desarrollo de plataformas de gestión centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad avanzada para la optimización de costes operativos en servicios de IA.",
+        "Ecosistemas de Desarrollo y DevOps: Ingeniería de herramientas de desarrollo personalizadas mediante un fork de VS Code (Electron), integrando flujos de despliegue automatizado con Docker y GitLab CI/CD para la estandarización del entorno técnico interno.",
+        "Calidad de Software y Seguridad: Aplicación rigurosa de principios SOLID y Clean Code basados en documentación oficial, priorizando la escalabilidad del sistema y la protección proactiva contra vectores de ataque para garantizar la integridad del software."
+    ],
+    "skills": [
+        "Python",
+        "Java",
+        "Spring Boot",
+        "Electron",
+        "LangChain",
+        "Milvus",
+        "MongoDB",
+        "RAG",
+        "Clean Architecture",
+        "SOLID",
+        "Clean Code",
+        "Docker",
+        "GitLab CI/CD"
+    ]
+}

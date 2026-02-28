@@ -1,0 +1,10 @@
+{
+    "order": 5,
+    "name": "Infrastructure, DevOps & CI/CD",
+    "technologies": [
+        { "name": "Docker", "icon": "docker", "color": "#2496ED" },
+        { "name": "Git", "icon": "git", "color": "#F05032" },
+        { "name": "GitLab CI/CD", "icon": "gitlab", "color": "#FC6D26" },
+        { "name": "Maven", "icon": "apachemaven", "color": "#C71A36" }
+    ]
+}

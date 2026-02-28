@@ -1,0 +1,10 @@
+{
+    "order": 3,
+    "name": "Frontend Development & Performance",
+    "technologies": [
+        { "name": "TypeScript", "icon": "typescript", "color": "#3178C6" },
+        { "name": "Angular", "icon": "angular", "color": "#DD0031" },
+        { "name": "React", "icon": "react", "color": "#61DAFB" },
+        { "name": "Astro", "icon": "astro", "color": "#FF5D01" }
+    ]
+}
