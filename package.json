@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "db:setup": "node --env-file=.env --import tsx scripts/init-vector-db.ts"
+    "db:setup": "node --env-file=.env --import tsx scripts/init-vector-db.ts",
+    "db:seed": "node --env-file=.env --import tsx scripts/seed-vector-db.ts"
   },
   "dependencies": {
     "@ai-sdk/groq": "^3.0.29",
