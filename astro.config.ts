@@ -18,12 +18,6 @@ export default defineConfig({
   env: {
     schema: {
       GROQ_API_KEY: envField.string({ context: 'server', access: 'secret' }),
-      EMBEDDING_PROVIDER: envField.enum({
-        context: 'server',
-        access: 'secret',
-        values: ['local', 'remote'],
-        optional: true,
-      }),
       EMBEDDING_API_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
       EMBEDDING_API_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
       EMBEDDING_API_MODEL: envField.string({ context: 'server', access: 'secret', optional: true }),

@@ -81,7 +81,7 @@ export const portfolioKnowledgeBase = {
         {
             order: 1,
             type: 'experience',
-            period: 'Mayo 2025 – Enero 2026',
+            period: 'Marzo 2025 – Enero 2026',
             institution: 'World Tech Enterprises',
             role: 'AI & Software Engineer (Intern) | AI Dept. & Internal Software Development',
             description: [
@@ -121,14 +121,13 @@ export const portfolioKnowledgeBase = {
             institution: 'Supermercados CODI',
             role: 'Assistant Manager | Team Lead',
             description: [
-                'Liderazgo de Equipos y Optimización de Workflows: Dirección y coordinación de equipos multidisciplinares en entornos de alto rendimiento, con enfoque en la optimización de procesos operativos y el cumplimiento de estándares de calidad.',
-                'Gestión de Incidencias y Mitigación de Riesgos: Toma de decisiones estratégicas bajo alta presión para la resolución de bloqueos operativos, aplicando metodologías de resolución de problemas para minimizar el impacto en la continuidad del servicio.',
-                'Análisis de Datos y Gestión de Recursos: Supervisión analítica mediante herramientas ERP para la optimización de costes, control de stock y eficiencia económica del centro.',
-                'Compromiso con la Excelencia Técnica: Autogestión y disciplina demostradas al compaginar una posición de alta responsabilidad con la formación técnica superior en desarrollo de software.',
+                'Liderazgo de Equipos y Optimización de Workflows: Dirección de equipos multidisciplinares en entornos de alto rendimiento, optimizando procesos operativos y asegurando la eficiencia en flujos de trabajo críticos.',
+                'Gestión de Incidencias y Mitigación de Riesgos: Toma de decisiones estratégicas bajo alta presión y aplicación de metodologías analíticas para la resolución ágil de bloqueos operativos, garantizando la continuidad del servicio.',
+                'Compromiso y Alto Rendimiento: Capacidad demostrada de autogestión, disciplina y rigor profesional al compaginar esta posición de alta responsabilidad con la formación técnica superior en desarrollo de software.',
             ],
             skills: [
-                'Team Leadership', 'Incident Management', 'SLA Monitoring',
-                'Workflow Optimization', 'ERP Systems', 'Data Analysis', 'Agile Methodologies',
+                'Team Leadership', 'Incident Management', 'Workflow Optimization',
+                'Problem Solving', 'Troubleshooting', 'Time Management', 'Resilience',
             ],
         },
         {

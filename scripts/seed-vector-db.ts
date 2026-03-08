@@ -101,53 +101,61 @@ const truncate = (text: string): string =>
     text.length > MAX_CONTENT_LENGTH ? text.slice(0, MAX_CONTENT_LENGTH - 3) + '...' : text;
 
 const buildProfileChunks = (profile: PersonalProfile): DocumentChunk[] => {
-    const summary = truncate(
-        `${profile.fullName} es un ${profile.role} ubicado en ${profile.location}. ` +
+    const contactChunk = truncate(
+        `Datos de contacto de ${profile.fullName}: ` +
         `Email: ${profile.email}. Teléfono: ${profile.phone}. ` +
+        `Ubicación: ${profile.location}. ` +
         `Idiomas: ${profile.languages.map((l) => `${l.name} (${l.level})`).join(', ')}. ` +
-        profile.bio,
+        `Perfiles: ${profile.links.map((l) => `${l.label}: ${l.url}`).join(' | ')}.`,
+    );
+
+    const bioChunk = truncate(
+        `Perfil profesional de ${profile.fullName}, ${profile.role} en ${profile.location}: ${profile.bio}`,
     );
 
     return [
-        {
-            content: summary,
-            metadata: { section: 'profile', source: 'personal_profile', type: 'summary' },
-        },
+        { content: bioChunk, metadata: { section: 'profile', source: 'bio', type: 'summary' } },
+        { content: contactChunk, metadata: { section: 'profile', source: 'contact', type: 'contact' } },
     ];
+};
+
+const PRIORITY_LABELS: Record<number, string> = {
+    1: 'Experiencia más reciente y relevante (PRIORIDAD MÁXIMA)',
+    2: 'Segunda experiencia más relevante',
+    3: 'Experiencia complementaria',
+    4: 'Formación académica',
 };
 
 const buildTrajectoryChunks = (trajectory: readonly TrajectoryEntry[]): DocumentChunk[] => {
     const chunks: DocumentChunk[] = [];
+    const sorted = [...trajectory].sort((a, b) => a.order - b.order);
 
-    for (const entry of trajectory) {
-        const context = `${entry.institution} (${entry.period}) — ${entry.role}`;
+    for (const entry of sorted) {
+        const priority = PRIORITY_LABELS[entry.order] ?? '';
+        const header = `[${priority}] ${portfolioKnowledgeBase.profile.fullName} — ${entry.role} en ${entry.institution} (${entry.period}).`;
+        const bullets = entry.description.length > 0
+            ? ' Responsabilidades: ' + entry.description.join(' | ')
+            : '';
+        const skills = entry.skills.length > 0
+            ? ` Tecnologías aplicadas: ${entry.skills.join(', ')}.`
+            : '';
 
-        if (entry.description.length > 0) {
-            for (const bullet of entry.description) {
-                chunks.push({
-                    content: truncate(`${context}: ${bullet}`),
-                    metadata: {
-                        section: 'trajectory',
-                        source: entry.institution,
-                        type: entry.type,
-                    },
-                });
-            }
-        }
-
-        if (entry.skills.length > 0) {
-            chunks.push({
-                content: truncate(
-                    `${context}. Tecnologías y habilidades aplicadas: ${entry.skills.join(', ')}.`,
-                ),
-                metadata: {
-                    section: 'trajectory',
-                    source: entry.institution,
-                    type: 'skills',
-                },
-            });
-        }
+        chunks.push({
+            content: truncate(`${header}${bullets}${skills}`),
+            metadata: { section: 'trajectory', source: entry.institution, type: entry.type },
+        });
     }
+
+    const careerSummary = sorted
+        .map((e, i) => `${i + 1}. ${e.role} en ${e.institution} (${e.period})`)
+        .join('. ');
+
+    chunks.push({
+        content: truncate(
+            `Trayectoria profesional de ${portfolioKnowledgeBase.profile.fullName} ordenada por relevancia: ${careerSummary}.`,
+        ),
+        metadata: { section: 'trajectory', source: 'career_summary', type: 'summary' },
+    });
 
     return chunks;
 };
@@ -155,8 +163,8 @@ const buildTrajectoryChunks = (trajectory: readonly TrajectoryEntry[]): Document
 const buildProjectChunks = (projects: readonly Project[]): DocumentChunk[] =>
     projects.map((project) => ({
         content: truncate(
-            `Proyecto: ${project.title}. Estado: ${project.status}. ` +
-            `${project.description} ` +
+            `Proyecto de ${portfolioKnowledgeBase.profile.fullName}: ${project.title}. ` +
+            `Estado: ${project.status}. ${project.description} ` +
             `Tecnologías: ${project.skills.join(', ')}.`,
         ),
         metadata: { section: 'project', source: project.title, type: project.status },
@@ -164,14 +172,27 @@ const buildProjectChunks = (projects: readonly Project[]): DocumentChunk[] =>
 
 const buildTechnologyChunks = (
     categories: readonly TechnologyCategory[],
-): DocumentChunk[] =>
-    categories.map((category) => ({
+): DocumentChunk[] => {
+    const individualChunks: DocumentChunk[] = categories.map((category) => ({
         content: truncate(
-            `Área de conocimiento: ${category.name}. ` +
-            `Tecnologías dominadas: ${category.technologies.join(', ')}.`,
+            `Competencia técnica de ${portfolioKnowledgeBase.profile.fullName} en ${category.name}: ${category.technologies.join(', ')}.`,
         ),
-        metadata: { section: 'technologies', source: category.name },
+        metadata: { section: 'technologies' as MetadataSection, source: category.name },
     }));
+
+    const consolidatedContent = categories
+        .map((c) => `${c.name}: ${c.technologies.join(', ')}`)
+        .join('. ');
+
+    individualChunks.push({
+        content: truncate(
+            `Stack tecnológico completo de ${portfolioKnowledgeBase.profile.fullName}: ${consolidatedContent}.`,
+        ),
+        metadata: { section: 'technologies' as MetadataSection, source: 'full_stack' },
+    });
+
+    return individualChunks;
+};
 
 const buildAllChunks = (): DocumentChunk[] => [
     ...buildProfileChunks(portfolioKnowledgeBase.profile),

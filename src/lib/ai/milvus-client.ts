@@ -21,9 +21,18 @@ const state: ConnectionState = {
     cleanupTimer: null,
 };
 
-const resolveConfig = (): { address: string; token?: string } => {
-    const address = process.env.MILVUS_URL;
-    const token = process.env.MILVUS_TOKEN;
+const resolveConfig = async (): Promise<{ address: string; token?: string }> => {
+    let address: string | undefined;
+    let token: string | undefined;
+
+    try {
+        const env = await import('astro:env/server');
+        address = env.MILVUS_URL;
+        token = env.MILVUS_TOKEN;
+    } catch {
+        address = process.env.MILVUS_URL;
+        token = process.env.MILVUS_TOKEN;
+    }
 
     if (!address) throw new Error('MILVUS_URL is required');
 
@@ -68,7 +77,7 @@ export const getMilvusClient = async (): Promise<MilvusClient> => {
         return state.client;
     }
 
-    const config = resolveConfig();
+    const config = await resolveConfig();
 
     const client = await withRetry(async () => {
         const instance = new MilvusClient({ ...config, timeout: CONFIG.CONNECTION_TIMEOUT });

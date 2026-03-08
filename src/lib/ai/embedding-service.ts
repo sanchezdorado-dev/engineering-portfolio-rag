@@ -65,7 +65,8 @@ const requestEmbeddings = async (
             'Content-Type': 'application/json',
             Authorization: `Bearer ${config.apiKey}`,
         },
-        body: JSON.stringify({ input: inputs, model: config.model }),
+
+        body: JSON.stringify({ inputs }),
     });
 
     if (!response.ok) {

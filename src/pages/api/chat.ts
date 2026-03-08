@@ -8,7 +8,7 @@ import { checkRateLimit } from '../../lib/security/rate-limiter.ts';
 
 const MODEL_ID = 'llama-3.3-70b-versatile';
 const MAX_MESSAGE_LENGTH = 500;
-const RAG_TIMEOUT_MS = 7_000;
+const RAG_TIMEOUT_MS = 30_000;
 
 interface ChatRequestBody {
     message: string;

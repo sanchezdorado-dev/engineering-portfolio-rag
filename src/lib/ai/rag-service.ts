@@ -1,18 +1,19 @@
 import type { MilvusClient } from '@zilliz/milvus2-sdk-node';
+import { MILVUS_COLLECTION_NAME } from 'astro:env/server';
 import { generateEmbedding } from './embedding-service.ts';
 import { getMilvusClient } from './milvus-client.ts';
 
 const SEARCH_CONFIG = {
-    TOP_K: 4,
-    HNSW_EF: 64,
-    MIN_SCORE: 0.3,
+    TOP_K: 6,
+    HNSW_EF: 128,
+    MIN_SCORE: 0.15,
     MAX_QUERY_LENGTH: 500,
     VECTOR_FIELD: 'vector',
     OUTPUT_FIELDS: ['content', 'metadata'] as const,
 } as const;
 
 const resolveCollectionName = (): string =>
-    process.env.MILVUS_COLLECTION_NAME ?? 'portfolio_rag';
+    MILVUS_COLLECTION_NAME ?? 'portfolio_rag';
 
 export interface RagSearchResult {
     readonly content: string;

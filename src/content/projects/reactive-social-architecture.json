@@ -3,7 +3,7 @@
     "priority": 2,
     "title": "Reactive Social Architecture",
     "description": "Red social escalable basada en Java 21 y Angular 21, diseñada bajo los estándares de Clean Architecture y principios SOLID. El backend implementa un sistema de seguridad proactiva con Spring Boot 3.4, integrando JWT (OAuth2), protección contra ataques de fuerza bruta (Rate Limiting) y auditoría inmutable de acciones. El frontend utiliza Signals y Lazy Loading para una reactividad optimizada, apoyado en un sistema de diseño modular (Design Tokens) en Sass. Gestión de persistencia robusta con PostgreSQL y migraciones atómicas mediante Flyway.",
-    "thumbnail": "/assets/projects/",
+    "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop",
     "repository": [
         {
             "label": "Client",
