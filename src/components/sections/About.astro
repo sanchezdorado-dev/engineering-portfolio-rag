@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import profilePicture from '../../assets/images/software-engineer-profile.webp';
 ---
 
@@ -18,7 +17,7 @@ import profilePicture from '../../assets/images/software-engineer-profile.webp';
       <div class="space-y-6">
         <p class="text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed">
           Soy <strong class="text-amber-600 dark:text-amber-400">Santiago Dorado</strong>, un
-          <strong class="text-amber-600 dark:text-amber-400">Software Engineer</strong>
+          <strong class="text-amber-600 dark:text-amber-400">Software Developer</strong>
           centrado en el desarrollo de aplicaciones robustas y escalables. Mi metodología
           de trabajo se basa en la aplicación práctica de buenas prácticas, apoyándome
           siempre en la documentación oficial y en los principios
@@ -61,10 +60,12 @@ import profilePicture from '../../assets/images/software-engineer-profile.webp';
         <div class="relative group">
           <div class="absolute -inset-4 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
           <div class="relative w-80 h-80 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl transition-all duration-300 group-hover:scale-105 overflow-hidden">
-            <Image
-              src={profilePicture}
+            <img
+              src={profilePicture.src}
               alt="Santiago Dorado - Software Engineer"
               class="w-full h-full object-cover object-center grayscale transition-all duration-500 group-hover:grayscale-0"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

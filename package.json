@@ -18,7 +18,8 @@
     "ai": "^6.0.116",
     "astro": "^5.17.1",
     "astro-icon": "^1.1.5",
-    "preact": "^10.28.4"
+    "preact": "^10.28.4",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.2.71",

@@ -2,12 +2,16 @@ import preact from '@astrojs/preact';
 import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
-import { defineConfig, envField } from 'astro/config';
+import { defineConfig, envField, passthroughImageService } from 'astro/config';
 
 export default defineConfig({
   ...(process.env.SITE_URL !== undefined ? { site: process.env.SITE_URL } : {}),
 
   integrations: [preact(), icon()],
+
+  image: {
+    service: passthroughImageService(),
+  },
 
   vite: {
     plugins: [tailwindcss()],

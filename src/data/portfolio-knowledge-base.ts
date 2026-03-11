@@ -85,8 +85,8 @@ export const portfolioKnowledgeBase = {
             institution: 'World Tech Enterprises',
             role: 'AI & Software Engineer (Intern) | AI Dept. & Internal Software Development',
             description: [
-                'Orquestación de Arquitecturas RAG: Diseño y despliegue de microservicios asíncronos en Python utilizando Milvus para la gestión de embeddings vectoriales, optimizando la recuperación semántica de información técnica y la latencia en la respuesta de agentes inteligentes.',
-                'Gobernanza y Arquitectura Full Stack: Desarrollo de plataformas de gestión centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad avanzada para la optimización de costes operativos en servicios de IA.',
+                'Sistemas de Recuperación Semántica (RAG): Diseño y despliegue de microservicios asíncronos en Python utilizando Milvus para la gestión de embeddings vectoriales, optimizando la recuperación semántica de información técnica y la latencia en la respuesta de agentes inteligentes.',
+                'Arquitectura de Servicios Centralizados: Desarrollo de plataformas de gestión centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad avanzada para la optimización de costes operativos en servicios de IA.',
                 'Ecosistemas de Desarrollo y DevOps: Ingeniería de herramientas de desarrollo personalizadas mediante un fork de VS Code (Electron), integrando flujos de despliegue automatizado con Docker y GitLab CI/CD para la estandarización del entorno técnico interno.',
                 'Calidad de Software y Seguridad: Aplicación rigurosa de principios SOLID y Clean Code basados en documentación oficial, priorizando la escalabilidad del sistema y la protección proactiva contra vectores de ataque para garantizar la integridad del software.',
             ],
@@ -103,10 +103,10 @@ export const portfolioKnowledgeBase = {
             institution: 'E-commerce de Pirograbados (Emprendimiento Propio)',
             role: 'Software Engineer | Founder',
             description: [
-                'Full-stack Architecture & Lifecycle Management: Diseño y despliegue integral de una plataforma e-commerce bajo Clean Architecture, utilizando Spring Boot y React para digitalizar y escalar un modelo de negocio tradicional hacia un entorno de alta disponibilidad.',
-                'Data Modeling & Schema Design: Modelado de datos en MongoDB para la gestión de catálogos dinámicos y polimórficos, optimizando la estructura de documentos para manejar variantes técnicas complejas de materiales y personalizaciones con un enfoque desacoplado.',
-                'Payment Orchestration & Secure Integration: Implementación y orquestación de pasarelas de pago mediante la API oficial de PayPal, garantizando el cumplimiento de estándares de seguridad críticos y el manejo íntegro de transacciones financieras.',
-                'Engineering for Business Impact: Aplicación de principios SOLID y metodologías de ingeniería de software para alinear la arquitectura técnica con los objetivos de conversión, asegurando un código mantenible y un flujo de usuario de baja fricción.',
+                'Arquitectura Full-Stack y Ciclo de Vida: Diseño y despliegue integral de una plataforma e-commerce bajo Clean Architecture, utilizando Spring Boot y React para digitalizar y escalar un modelo de negocio tradicional hacia un entorno digital escalable.',
+                'Modelado de Datos y Diseño de Esquemas: Modelado de datos en MongoDB para la gestión de catálogos dinámicos y polimórficos, optimizando la estructura de documentos para manejar variantes técnicas complejas de materiales y personalizaciones con un enfoque desacoplado.',
+                'Integración de Pagos y Seguridad: Implementación robusta de pasarelas de pago mediante la API oficial de PayPal, garantizando el cumplimiento de estándares de seguridad críticos y el manejo íntegro de transacciones financieras basado en documentación oficial.',
+                'Ingeniería Orientada a Producto: Aplicación de principios SOLID y metodologías de ingeniería de software para alinear la arquitectura técnica con los objetivos de conversión, asegurando un código mantenible y un flujo de usuario de baja fricción.',
             ],
             skills: [
                 'Java', 'TypeScript', 'Spring Boot', 'React', 'MongoDB',
@@ -121,9 +121,9 @@ export const portfolioKnowledgeBase = {
             institution: 'Supermercados CODI',
             role: 'Assistant Manager | Team Lead',
             description: [
-                'Liderazgo de Equipos y Optimización de Workflows: Dirección de equipos multidisciplinares en entornos de alto rendimiento, optimizando procesos operativos y asegurando la eficiencia en flujos de trabajo críticos.',
-                'Gestión de Incidencias y Mitigación de Riesgos: Toma de decisiones estratégicas bajo alta presión y aplicación de metodologías analíticas para la resolución ágil de bloqueos operativos, garantizando la continuidad del servicio.',
-                'Compromiso y Alto Rendimiento: Capacidad demostrada de autogestión, disciplina y rigor profesional al compaginar esta posición de alta responsabilidad con la formación técnica superior en desarrollo de software.',
+                'Gestión Operativa y Resolución de Incidencias: Toma de decisiones críticas y resolución ágil de bloqueos en entornos de alta presión y demanda constante. Habilidad transferible directamente al troubleshooting técnico y a la protección de la continuidad del servicio frente a imprevistos en producción.',
+                'Liderazgo de Equipos y Optimización de Flujos: Coordinación de cargas de trabajo y capacitación técnica (onboarding y mentoría) de nuevo personal. Experiencia sólida en comunicación asertiva y resolución de conflictos, competencias fundamentales para la integración en equipos bajo metodologías Agile/Scrum.',
+                'Resiliencia y Autogestión Orientada a Objetivos: Alto nivel de disciplina y rigor profesional, compaginando exitosamente la gestión integral operativa con la inmersión técnica del Grado Superior (DAW) y el desarrollo autodidacta de arquitecturas de software avanzadas.',
             ],
             skills: [
                 'Team Leadership', 'Incident Management', 'Workflow Optimization',

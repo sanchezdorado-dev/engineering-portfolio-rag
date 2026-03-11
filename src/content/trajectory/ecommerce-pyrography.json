@@ -1,14 +1,14 @@
 {
     "order": 2,
     "type": "experience",
-    "period": "Junio 2023 – Diciembre 2024",
-    "institution": "E-commerce de Pirograbados (Emprendimiento Propio)",
-    "role": "Software Engineer | Founder",
+    "period": "Junio 2023 \u2013 Diciembre 2024",
+    "institution": "Arte en Llamas | E-commerce Platform",
+    "role": "Software Developer & Entrepreneur",
     "description": [
-        "Full-stack Architecture & Lifecycle Management: Diseño y despliegue integral de una plataforma e-commerce bajo Clean Architecture, utilizando Spring Boot y React para digitalizar y escalar un modelo de negocio tradicional hacia un entorno de alta disponibilidad.",
-        "Data Modeling & Schema Design: Modelado de datos en MongoDB para la gestión de catálogos dinámicos y polimórficos, optimizando la estructura de documentos para manejar variantes técnicas complejas de materiales y personalizaciones con un enfoque desacoplado.",
-        "Payment Orchestration & Secure Integration: Implementación y orquestación de pasarelas de pago mediante la API oficial de PayPal, garantizando el cumplimiento de estándares de seguridad críticos y el manejo íntegro de transacciones financieras basado en documentación oficial.",
-        "Engineering for Business Impact: Aplicación de principios SOLID y metodologías de ingeniería de software para alinear la arquitectura técnica con los objetivos de conversión, asegurando un código mantenible y un flujo de usuario de baja fricción."
+        "Ingenier\u00eda de Software y Arquitectura: Dise\u00f1o y desarrollo de una plataforma e-commerce integral con Spring Boot (Java) y React. Implementaci\u00f3n de una arquitectura backend estructurada por capas l\u00f3gicas para separar claramente la exposici\u00f3n, la l\u00f3gica de negocio y la persistencia, aplicando principios SOLID para garantizar un c\u00f3digo limpio y escalable sin a\u00f1adir sobreingenier\u00eda.",
+        "Gesti\u00f3n de Datos NoSQL: Modelado y gesti\u00f3n de persistencia en MongoDB, dise\u00f1ando esquemas de documentos flexibles para soportar un cat\u00e1logo de productos con m\u00faltiples variantes. Optimizaci\u00f3n de la capa de datos mediante el dise\u00f1o de consultas eficientes para minimizar los tiempos de respuesta.",
+        "Integraci\u00f3n de Pasarela de Pagos: Implementaci\u00f3n de la API REST de PayPal para el procesamiento de cobros desde el backend. Resoluci\u00f3n de la validaci\u00f3n de transacciones y manejo seguro de tokens de autenticaci\u00f3n, basando el desarrollo en el estudio riguroso de la documentaci\u00f3n oficial.",
+        "Digitalizaci\u00f3n y Ciclo de Vida: Gesti\u00f3n pr\u00e1ctica de todo el ciclo de vida del software: desde la toma de requisitos y dise\u00f1o de interfaces hasta la puesta en producci\u00f3n, logrando digitalizar de forma funcional un negocio artesanal real."
     ],
     "skills": [
         "Java",

@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import profilePicture from '../../assets/images/software-engineer-profile.webp';
 
 interface SocialLink {
@@ -11,7 +10,7 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   { href: 'https://github.com/sanchezdorado-dev', label: 'GitHub', external: true },
   { href: 'https://www.linkedin.com/in/santiago-dorado-sánchez-6933583b3', label: 'LinkedIn', external: true },
-  { href: '/docs/software-engineer-cv.pdf', label: 'Curriculum', external: true },
+  { href: '/docs/software-developer.pdf', label: 'Curriculum', external: true },
 ];
 ---
 
@@ -19,11 +18,12 @@ const socialLinks: SocialLink[] = [
   <div class="max-w-3xl mx-auto">
     <div class="flex items-center gap-4 mb-8">
       <div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 border-3 border-white dark:border-gray-700 shadow-lg flex-shrink-0 overflow-hidden flex items-center justify-center">
-        <Image
-          src={profilePicture}
+        <img
+          src={profilePicture.src}
           alt="Santiago - Software Engineer"
           class="w-full h-full object-cover object-center"
           loading="eager"
+          decoding="async"
         />
       </div>
 
@@ -43,7 +43,7 @@ const socialLinks: SocialLink[] = [
     </h1>
 
     <p class="text-[13px] text-blue-400 font-medium uppercase tracking-wide mb-6">
-      Software Engineer | Java & Spring Boot | RAG & Agentic AI Engineer
+      Software Developer | Java, Spring Boot & Angular | RAG & Agentic AI Integration
     </p>
 
     <p class="text-[13px] text-gray-600 dark:text-gray-300 leading-relaxed mb-10 max-w-3xl">
