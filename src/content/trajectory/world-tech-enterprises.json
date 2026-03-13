@@ -3,7 +3,7 @@
     "type": "experience",
     "period": "Septiembre 2025 \u2013 Diciembre 2025",
     "institution": "World Tech Enterprises",
-    "role": "AI & Software Engineer (Intern) | AI Dept. & Internal Software Development",
+    "role": "AI & Software Developer (Intern) | AI Dept. & Internal Software Development",
     "description": [
         "Sistemas de Recuperaci\u00f3n Sem\u00e1ntica (RAG): Dise\u00f1o y despliegue de microservicios as\u00edncronos en Python utilizando Milvus para la gesti\u00f3n de embeddings vectoriales, optimizando la recuperaci\u00f3n sem\u00e1ntica de informaci\u00f3n t\u00e9cnica y la latencia en la respuesta de agentes inteligentes.",
         "Arquitectura de Servicios Centralizados: Desarrollo de plataformas de gesti\u00f3n centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad para optimizar los costes de consumo en servicios de IA.",

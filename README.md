@@ -1,43 +1,125 @@
-# Astro Starter Kit: Minimal
+# Engineering Portfolio & RAG
 
-```sh
-npm create astro@latest -- --template minimal
+Software engineering portfolio with an integrated conversational assistant based on RAG (*Retrieval-Augmented Generation*). The chat retrieves semantic chunks from the portfolio knowledge base stored in a vector database and injects them as context into the LLM prompt, returning accurate and grounded responses.
+
+![Project preview](./public/assets/projects/engineering-portfolio-rag.webp)
+
+## Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| Framework | Astro 5.0 (SSR) |
+| Interactive UI | Preact + Island Architecture |
+| Styles | Tailwind CSS v4 |
+| LLM | Groq (via AI SDK) |
+| Embeddings | OpenAI-compatible API (e.g. HuggingFace) |
+| Vector database | Milvus (Zilliz) |
+| Deployment | Vercel |
+| Language | TypeScript |
+
+## Architecture
+
+The chat follows the standard RAG pattern:
+
+```
+User → API /api/chat
+              ↓
+        Generate query embedding
+              ↓
+        Semantic search in Milvus (HNSW + cosine)
+              ↓
+        Inject retrieved chunks into the system prompt
+              ↓
+        Groq inference → streamed response
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The codebase is organized by responsibility, not by file type:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+src/
+├── components/         # UI components (Astro + Preact)
+│   ├── layout/         # Navbar, Footer
+│   ├── sections/       # Page sections (Hero, Projects, About…)
+│   └── ui/             # Interactive components (ChatWindow, ThemeToggle)
+├── content/            # Typed content collections (projects, technologies…)
+├── data/               # Portfolio knowledge base (seeding source of truth)
+├── hooks/              # Preact custom hooks
+├── lib/
+│   ├── ai/             # RAG logic: embeddings, Milvus client, search, prompt
+│   ├── security/       # IP-based rate limiter
+│   └── ui/             # Chat UI constants
+└── pages/
+    ├── index.astro     # Main page
+    └── api/chat.ts     # Chat streaming endpoint
+scripts/
+├── init-vector-db.ts   # Creates the Milvus collection and HNSW index
+└── seed-vector-db.ts   # Embeds the knowledge base and inserts into Milvus
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Prerequisites
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Node.js 20+
+- A Milvus instance or account on [Zilliz Cloud](https://cloud.zilliz.com)
+- [Groq](https://console.groq.com) API key
+- An OpenAI-compatible embeddings endpoint (e.g. HuggingFace Inference Endpoints)
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Setup
 
-## 🧞 Commands
+### 1. Install dependencies
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm install
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### 2. Environment variables
 
-## 👀 Want to learn more?
+```bash
+cp .env.example .env
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Fill in the values in `.env`. The `.env.example` file includes reference URLs and the expected format for each key.
+
+### 3. Initialize the vector database
+
+Run these two scripts in order. This only needs to be done once (or whenever the knowledge base changes).
+
+```bash
+# Creates the Milvus collection and HNSW index
+npm run db:setup
+
+# Embeds the knowledge base and inserts the chunks
+npm run db:seed
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+# → http://localhost:4321
+```
+
+## Commands
+
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Development server at `localhost:4321` |
+| `npm run build` | Production build to `./dist/` |
+| `npm run preview` | Preview the build locally before deploying |
+| `npm run db:setup` | Initializes the Milvus vector collection |
+| `npm run db:seed` | Inserts portfolio embeddings into Milvus |
+
+## Deployment on Vercel
+
+The project uses the official Astro adapter for Vercel. Deployment is automatic once the repository is connected in the Vercel dashboard.
+
+Make sure all environment variables defined in `.env.example` are configured under **Environment Variables** in the Vercel project settings before deploying.
+
+## Security
+
+- **Rate limiting**: the `/api/chat` endpoint is limited to 20 requests per IP every 60 seconds.
+- **Environment validation**: Astro validates environment variables at build time via `envField`, preventing startup with incomplete configuration.
+- **Prompt hardening**: the system prompt includes explicit instructions to resist prompt injection attempts embedded in user queries.
+
+## License
+
+[MIT](LICENSE)

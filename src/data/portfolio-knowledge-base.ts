@@ -63,11 +63,11 @@ export interface PortfolioKnowledgeBase {
 export const portfolioKnowledgeBase = {
     profile: {
         fullName: 'Santiago Dorado Sánchez',
-        role: 'Software Engineer',
+        role: 'Software Developer',
         location: 'Sevilla, España',
         email: 'sanchez.dorado@outlook.com',
         phone: '+34 613 077 246',
-        bio: 'Software Engineer especializado en el desarrollo de aplicaciones robustas y escalables. Metodología basada en SOLID, Clean Architecture y Clean Code, apoyada siempre en documentación oficial. Especializado en el diseño de APIs y microservicios en el ecosistema Java con Spring Boot, priorizando la legibilidad del código y altos estándares de seguridad desde las primeras fases del desarrollo. Complementa el backend con interfaces modernas y reactivas en Angular y React. Diferencial principal: implementación práctica de IA Generativa en proyectos reales, construyendo sistemas RAG y conectando LLMs para dotar a las aplicaciones de capacidades inteligentes que aportan valor directo al negocio. Trabaja bajo metodologías Agile, flujos CI/CD con Docker y GitLab, e integra el motor de persistencia adecuado para cada caso de uso: PostgreSQL, MongoDB y Milvus para el ecosistema de IA.',
+        bio: 'Software Developer especializado en el desarrollo de aplicaciones robustas y escalables. Metodología basada en SOLID, Clean Architecture y Clean Code, apoyada siempre en documentación oficial. Especializado en el diseño de APIs y microservicios en el ecosistema Java con Spring Boot, priorizando la legibilidad del código y altos estándares de seguridad desde las primeras fases del desarrollo. Complementa el backend con interfaces modernas y reactivas en Angular y React. Diferencial principal: implementación práctica de IA Generativa en proyectos reales, construyendo sistemas RAG y conectando LLMs para dotar a las aplicaciones de capacidades inteligentes que aportan valor directo al negocio. Trabaja bajo metodologías Agile, flujos CI/CD con Docker y GitLab, e integra el motor de persistencia adecuado para cada caso de uso: PostgreSQL, MongoDB y Milvus para el ecosistema de IA.',
         languages: [
             { name: 'Español', level: 'Native' },
             { name: 'Inglés', level: 'B1' },
@@ -81,14 +81,14 @@ export const portfolioKnowledgeBase = {
         {
             order: 1,
             type: 'experience',
-            period: 'Marzo 2025 – Enero 2026',
+            period: 'Septiembre 2025 – Diciembre 2025',
             institution: 'World Tech Enterprises',
-            role: 'AI & Software Engineer (Intern) | AI Dept. & Internal Software Development',
+            role: 'AI & Software Developer (Intern) | AI Dept. & Internal Software Development',
             description: [
                 'Sistemas de Recuperación Semántica (RAG): Diseño y despliegue de microservicios asíncronos en Python utilizando Milvus para la gestión de embeddings vectoriales, optimizando la recuperación semántica de información técnica y la latencia en la respuesta de agentes inteligentes.',
-                'Arquitectura de Servicios Centralizados: Desarrollo de plataformas de gestión centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad avanzada para la optimización de costes operativos en servicios de IA.',
-                'Ecosistemas de Desarrollo y DevOps: Ingeniería de herramientas de desarrollo personalizadas mediante un fork de VS Code (Electron), integrando flujos de despliegue automatizado con Docker y GitLab CI/CD para la estandarización del entorno técnico interno.',
-                'Calidad de Software y Seguridad: Aplicación rigurosa de principios SOLID y Clean Code basados en documentación oficial, priorizando la escalabilidad del sistema y la protección proactiva contra vectores de ataque para garantizar la integridad del software.',
+                'Arquitectura de Servicios Centralizados: Desarrollo de plataformas de gestión centralizada bajo Clean Architecture utilizando Spring Boot y MongoDB, implementando sistemas de control de cuotas y seguridad para optimizar los costes de consumo en servicios de IA.',
+                'Ecosistemas de Desarrollo y DevOps: Adaptación y personalización de un entorno de desarrollo mediante un fork de VS Code (Electron), integrando flujos de despliegue automatizado con Docker y GitLab CI/CD para la estandarización del entorno.',
+                'Calidad de Software y Seguridad: Aplicación rigurosa de principios SOLID y Clean Code basados en documentación oficial, priorizando la escalabilidad del sistema y seguridad robusta (JWT) para garantizar la integridad del software.',
             ],
             skills: [
                 'Python', 'Java', 'Spring Boot', 'Electron', 'LangChain', 'Milvus', 'MongoDB',
@@ -100,13 +100,13 @@ export const portfolioKnowledgeBase = {
             order: 2,
             type: 'experience',
             period: 'Junio 2023 – Diciembre 2024',
-            institution: 'E-commerce de Pirograbados (Emprendimiento Propio)',
-            role: 'Software Engineer | Founder',
+            institution: 'Arte en Llamas | E-commerce Platform',
+            role: 'Software Developer & Entrepreneur',
             description: [
-                'Arquitectura Full-Stack y Ciclo de Vida: Diseño y despliegue integral de una plataforma e-commerce bajo Clean Architecture, utilizando Spring Boot y React para digitalizar y escalar un modelo de negocio tradicional hacia un entorno digital escalable.',
-                'Modelado de Datos y Diseño de Esquemas: Modelado de datos en MongoDB para la gestión de catálogos dinámicos y polimórficos, optimizando la estructura de documentos para manejar variantes técnicas complejas de materiales y personalizaciones con un enfoque desacoplado.',
-                'Integración de Pagos y Seguridad: Implementación robusta de pasarelas de pago mediante la API oficial de PayPal, garantizando el cumplimiento de estándares de seguridad críticos y el manejo íntegro de transacciones financieras basado en documentación oficial.',
-                'Ingeniería Orientada a Producto: Aplicación de principios SOLID y metodologías de ingeniería de software para alinear la arquitectura técnica con los objetivos de conversión, asegurando un código mantenible y un flujo de usuario de baja fricción.',
+                'Ingeniería de Software y Arquitectura: Diseño y desarrollo de una plataforma e-commerce integral con Spring Boot (Java) y React. Implementación de una arquitectura backend estructurada por capas lógicas para separar claramente la exposición, la lógica de negocio y la persistencia, aplicando principios SOLID para garantizar un código limpio y escalable sin añadir sobreingeniería.',
+                'Gestión de Datos NoSQL: Modelado y gestión de persistencia en MongoDB, diseñando esquemas de documentos flexibles para soportar un catálogo de productos con múltiples variantes. Optimización de la capa de datos mediante el diseño de consultas eficientes para minimizar los tiempos de respuesta.',
+                'Integración de Pasarela de Pagos: Implementación de la API REST de PayPal para el procesamiento de cobros desde el backend. Resolución de la validación de transacciones y manejo seguro de tokens de autenticación, basando el desarrollo en el estudio riguroso de la documentación oficial.',
+                'Digitalización y Ciclo de Vida: Gestión práctica de todo el ciclo de vida del software: desde la toma de requisitos y diseño de interfaces hasta la puesta en producción, logrando digitalizar de forma funcional un negocio artesanal real.',
             ],
             skills: [
                 'Java', 'TypeScript', 'Spring Boot', 'React', 'MongoDB',
@@ -121,9 +121,9 @@ export const portfolioKnowledgeBase = {
             institution: 'Supermercados CODI',
             role: 'Assistant Manager | Team Lead',
             description: [
-                'Gestión Operativa y Resolución de Incidencias: Toma de decisiones críticas y resolución ágil de bloqueos en entornos de alta presión y demanda constante. Habilidad transferible directamente al troubleshooting técnico y a la protección de la continuidad del servicio frente a imprevistos en producción.',
-                'Liderazgo de Equipos y Optimización de Flujos: Coordinación de cargas de trabajo y capacitación técnica (onboarding y mentoría) de nuevo personal. Experiencia sólida en comunicación asertiva y resolución de conflictos, competencias fundamentales para la integración en equipos bajo metodologías Agile/Scrum.',
-                'Resiliencia y Autogestión Orientada a Objetivos: Alto nivel de disciplina y rigor profesional, compaginando exitosamente la gestión integral operativa con la inmersión técnica del Grado Superior (DAW) y el desarrollo autodidacta de arquitecturas de software avanzadas.',
+                'Gestión de Incidencias y Toma de Decisiones: Resolución ágil de bloqueos operativos en entornos de alta presión. Capacidad probada para analizar situaciones críticas en tiempo real y ejecutar soluciones inmediatas, garantizando la continuidad del servicio al cliente.',
+                'Liderazgo y Mentoría de Equipos: Dirección diaria del personal, planificación estratégica de la carga de trabajo y ejecución integral de procesos de onboarding. Fomento del trabajo colaborativo mediante comunicación asertiva y resolución eficaz de conflictos.',
+                'Resiliencia y Ética Profesional: Alto nivel de autogestión y disciplina. Compaginación exitosa de responsabilidades de gestión operativa con la superación del Grado Superior (DAW) y la formación técnica autodidacta en arquitectura de software.',
             ],
             skills: [
                 'Team Leadership', 'Incident Management', 'Workflow Optimization',
@@ -145,7 +145,7 @@ export const portfolioKnowledgeBase = {
             featured: true,
             priority: 1,
             title: 'Engineering Portfolio & RAG',
-            description: 'Portfolio de alto rendimiento diseñada con Astro 5.0 e Island Architecture para optimizar la hidratación parcial y el rendimiento. Integra un sistema RAG orquestado mediante Milvus, HuggingFace y Groq, garantizando una inferencia semántica avanzada. La arquitectura implementa Clean Architecture, principios SOLID y validación de esquemas con Zod, asegurando escalabilidad, seguridad y el cumplimiento de estándares industriales de desarrollo.',
+            description: 'Portfolio diseñado con Astro 5.0 e Island Architecture para optimizar la hidratación parcial y el rendimiento. Integra un sistema RAG mediante Milvus como base de datos vectorial, HuggingFace para la generación de embeddings y Groq (LLM). La arquitectura implementa Clean Architecture, principios SOLID y validación de esquemas con Zod, asegurando escalabilidad, seguridad y una base de código mantenible.',
             repository: 'https://github.com/sanchezdorado-dev/engineering-portfolio-rag',
             status: 'production',
             skills: [
@@ -159,7 +159,7 @@ export const portfolioKnowledgeBase = {
             featured: true,
             priority: 2,
             title: 'Reactive Social Architecture',
-            description: 'Red social escalable basada en Java 21 y Angular 21, diseñada bajo los estándares de Clean Architecture y principios SOLID. El backend implementa un sistema de seguridad proactiva con Spring Boot 3.4, integrando JWT (OAuth2), protección contra ataques de fuerza bruta (Rate Limiting) y auditoría inmutable de acciones. El frontend utiliza Signals y Lazy Loading para una reactividad optimizada, apoyado en un sistema de diseño modular (Design Tokens) en Sass. Gestión de persistencia robusta con PostgreSQL y migraciones atómicas mediante Flyway.',
+            description: 'Red social escalable basada en Java 21 y Angular 21, diseñada bajo los estándares de Clean Architecture y principios SOLID. El backend implementa un sistema de seguridad con Spring Boot 3.4, integrando JWT (OAuth2), protección contra ataques de fuerza bruta (Rate Limiting) y registro de auditoría. El frontend utiliza Signals y Lazy Loading para una reactividad optimizada, apoyado en un sistema de diseño modular (Design Tokens) en Sass. Gestión de persistencia con PostgreSQL y migraciones mediante Flyway.',
             repository: [
                 { label: 'Client', url: 'https://github.com/sanchezdorado-dev/social-platform-client' },
                 { label: 'Core', url: 'https://github.com/sanchezdorado-dev/social-platform-core' },
